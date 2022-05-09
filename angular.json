@@ -33,7 +33,8 @@
               "./node_modules/primeng/resources/themes/lara-dark-teal/theme.css",
               "./node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
