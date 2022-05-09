@@ -8,6 +8,8 @@ import {ButtonModule} from "primeng/button";
 import {MatButtonModule} from "@angular/material/button";
 import {AuthModule} from "./auth/auth.module";
 import {SharedModule} from "./shared/shared.module";
+import {InputTextModule} from "primeng/inputtext";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import {SharedModule} from "./shared/shared.module";
     ButtonModule,
     MatButtonModule,
     AuthModule,
-    SharedModule
+    SharedModule,
+    InputTextModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,91 @@
+.login-container{
+  height: 100%;
+  background-color: #d6e2e9;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-panel{
+  width: 37rem;
+  height: 37rem;
+  background-color: white;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-row{
+  float:left;
+  height: 100%;
+  width: 18.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #d6e2e9;
+  opacity: 0.6;
+}
+
+.right-row{
+  /*margin-top:50px;*/
+  width: 18.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.login-form{
+  text-align: center;
+
+}
+
+.logoimage{
+  width:30%;
+}
+
+.welcome{
+  margin-top: 14rem;
+}
+
+::ng-deep.finput{
+  background-color:#d6e2e9;
+  border: none;
+  color: black;
+
+}
+::ng-deep.finput:enabled:focus{
+  border-color: grey !important;
+  box-shadow: 0 0 0 0.02rem grey !important;
+
+}
+.form-group{
+  padding-top: 10px;
+}
+
+.btn{
+  height:40px;
+  width:200px;
+  background-color:#caf0f8 ;
+  border: unset;
+  outline:none;
+}
+
+.btn:hover{
+  background-color:#90e0ef;
+}
+
+.btn:focus{
+  border: none;
+  outline:none;
+}
+
+.btncls{
+  padding-top:20px;
+}
+
+
+
