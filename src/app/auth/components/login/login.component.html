@@ -10,19 +10,21 @@
     <div class="right-row">
       <form [formGroup]="loginForm" id="ngForm" #authForm="ngForm">
         <mat-form-field class="form-field">
-          <input type="email" class="" matInput placeholder="Email"    formControlName="email" required email>
+          <input type="email" class="" matInput placeholder="Email"    formControlName="email" required email
+                  [(ngModel)]="username">
         </mat-form-field>
         <mat-form-field class="form-field">
-          <input type="password" class="" matInput placeholder="Password"   formControlName="password" required minlength="6">
+          <input type="password" class="" matInput placeholder="Password"   formControlName="password" required minlength="6"
+                 [(ngModel)]="password">
         </mat-form-field>
       </form>
-      <button routerLink="/home-page"
-        pButton type="submit" class="btn" (click)="onSubmit()" type="button" [disabled]="!authForm.valid">
-        {{ isLoginMode ? 'Log in' : 'Sign Up'}}
+      <button
+        pButton type="submit" class="btn" (click)="checkLogin()" type="button" [disabled]="!authForm.valid">
+        Log in
       </button>
       <pre></pre>
-      <button pButton type="submit" class="btn" (click)="onSwitchMode()" type="button">
-        Switch to {{ isLoginMode ? 'Sign Up' : 'Login'}}
+      <button pButton type="submit" class="btn"  type="button" routerLink="/register">
+        Create an account
       </button>
     </div>
   </div>

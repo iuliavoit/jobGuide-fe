@@ -6,7 +6,7 @@
       mat-button class="btn">Jobs</button>
     <button routerLink="/account"
       mat-button class="btn">Account</button>
-    <button routerLink="/login"
+    <button *ngIf="loginService.isUserLoggedIn()" routerLink="/login"
             mat-button class="btn">Sign out</button>
   </mat-toolbar>
 

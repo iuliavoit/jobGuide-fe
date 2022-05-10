@@ -16,7 +16,9 @@ import { HomePageComponent } from './home-page/components/home-page.component';
 import {RouterModule} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { AccountComponent } from './account/components/account.component';
-import { JobsUserComponent } from './jobs-user/jobs-user.component';
+import { JobsUserComponent } from './jobs-user/components/jobs-user.component';
+import { LogoutComponent } from './auth/components/logout/logout.component';
+
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { JobsUserComponent } from './jobs-user/jobs-user.component';
     HeaderComponent,
     HomePageComponent,
     AccountComponent,
-    JobsUserComponent
+    JobsUserComponent,
+    LogoutComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {FormControl, FormGroup} from "@angular/forms";
+import {AuthenticationService} from "./login.service";
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   submitted = false;
   loginForm= new FormGroup(
     {
@@ -15,10 +17,7 @@ export class LoginComponent implements OnInit {
       password: new FormControl(),
     }
   );
-  constructor(private router:Router) { }
 
-  ngOnInit(): void {
-  }
   onSubmit() {
     this.submitted=true;
 
@@ -31,8 +30,22 @@ export class LoginComponent implements OnInit {
     console.log(password);
   }
 
-  isLoginMode = true;
-  onSwitchMode() {
-    this.isLoginMode = !this.isLoginMode;
+  username = 'test@test.com';
+  password= '';
+  invalidLogin = false;
+
+  constructor(private router:Router,
+              private loginservice: AuthenticationService) { }
+
+  ngOnInit(): void {
+  }
+
+  checkLogin() {
+    if (this.loginservice.authenticate(this.username, this.password)
+    ) {
+      this.router.navigate(['home-page'])
+      this.invalidLogin = false
+    } else
+      this.invalidLogin = true
   }
 }
