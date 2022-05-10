@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {ButtonModule} from "primeng/button";
 import {MatButtonModule} from "@angular/material/button";
-import {AuthModule} from "./auth/auth.module";
 import {SharedModule} from "./shared/shared.module";
 import {InputTextModule} from "primeng/inputtext";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {LoginComponent} from "./auth/components/login/login.component";
+import {RegisterComponent} from "./auth/components/register/register.component";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -21,11 +25,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     NoopAnimationsModule,
     ButtonModule,
     MatButtonModule,
-    AuthModule,
     SharedModule,
     InputTextModule,
     FormsModule,
     ReactiveFormsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
