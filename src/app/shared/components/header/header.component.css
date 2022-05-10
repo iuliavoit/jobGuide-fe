@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #d6e2e9;
+  position: sticky;
+  top: 0;
+}
+
+.btn {
+  margin:3px;
+  height:40px;
+  width:100px;
+  background-color:#E6EEF2 ;
+  border: unset;
+  outline:none;
+}
+
+.btn:hover{
+  background-color:#90e0ef;
+}
+
+.btn:focus{
+  border: none;
+  outline:none;
+}
+
+

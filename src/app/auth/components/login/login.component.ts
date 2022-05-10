@@ -26,6 +26,13 @@ export class LoginComponent implements OnInit {
     const password=this.loginForm.value.password;
 
     this.loginForm.reset();
+
     console.log(email);
+    console.log(password);
+  }
+
+  isLoginMode = true;
+  onSwitchMode() {
+    this.isLoginMode = !this.isLoginMode;
   }
 }
