@@ -26,6 +26,6 @@ export class LoginComponent implements OnInit {
     const password=this.loginForm.value.password;
 
     this.loginForm.reset();
-    this.router.navigate(['/guidejobs/homepage']);
+    console.log(email);
   }
 }
