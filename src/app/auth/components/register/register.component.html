@@ -1,1 +1,36 @@
-<p>register works!</p>
+<div class="login-container p-d-flex">
+  <div class="login-panel">
+    <div class="left-row">
+      <div class="welcome">
+        <img src="../../../../assets/applogo.png"
+             class="logoimage">
+        <p>Welcome to GuideJobs!</p>
+      </div>
+    </div>
+    <div class="right-row">
+      <form [formGroup]="loginForm" id="ngForm" #authForm="ngForm">
+        <mat-form-field class="form-field">
+          <input type="email" class="" matInput placeholder="Email"    formControlName="email" required email
+                 [(ngModel)]="username">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input type="password" class="" matInput placeholder="Password"   formControlName="password" required minlength="6"
+                  [(ngModel)]="password">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input type="password" class="" matInput placeholder="Confirm Password"   formControlName="password" required minlength="6"
+                  [(ngModel)]="confirmPassword">
+        </mat-form-field>
+      </form>
+      <button
+        pButton type="submit" class="btn" (click)="onSubmit(); checkRegister()" type="button" [disabled]="!authForm.valid">
+        Sign up
+      </button>
+      <pre></pre>
+      <button pButton type="submit" class="btn" type="button" routerLink="/login" (click)="onSubmit()">
+        Switch to Log in
+      </button>
+    </div>
+  </div>
+</div>
+
