@@ -4,3 +4,58 @@
   background: #f2e9e4;
 }
 
+.welcome-row{
+  width: 100%;
+  height:60px;
+  background-color: #d6e2e9;
+  text-align:left;
+  float:left;
+  margin-bottom: 10px;
+}
+
+.welcome-text{
+  color:white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.welcome-second{
+  display: flex;
+  width: 100%;
+  background-color:#edf2f4;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.welcome-paragraph{
+  width:62vw;
+  background-color: white;
+  margin-left: 5px;
+  border-radius: 15px ;
+}
+
+.guide{
+  width:18vw;
+  background-color: white;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right:5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.nd{
+  width:37vw;
+  background-color: white;
+  margin-right:5px!important;
+  border-radius: 15px ;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image{
+  width: 26%;
+  padding-top: 5px;
+}
