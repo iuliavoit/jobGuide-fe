@@ -20,6 +20,7 @@ import { JobsUserComponent } from './jobs-user/components/jobs-user.component';
 import { LogoutComponent } from './auth/components/logout/logout.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
+import {ListboxModule} from "primeng/listbox";
 
 
 
@@ -35,22 +36,23 @@ import {MatCardModule} from "@angular/material/card";
     LogoutComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NoopAnimationsModule,
-        ButtonModule,
-        MatButtonModule,
-        InputTextModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        RouterModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatCardModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NoopAnimationsModule,
+    ButtonModule,
+    MatButtonModule,
+    InputTextModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    RouterModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    ListboxModule,
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

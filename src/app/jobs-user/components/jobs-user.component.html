@@ -1,2 +1,31 @@
-<app-header></app-header>
-<p>jobs-user</p>
+
+<div class="jobs-container p-d-flexbox">
+  <app-header></app-header>
+  <div class="filters-row">
+    <h3>Filtrează după:</h3>
+    <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
+               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
+      <ng-template let-city pTemplate="item">
+        <div class="country-item">
+          <div>{{city.name}}</div>
+        </div>
+      </ng-template>
+    </p-listbox>
+    <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
+               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
+      <ng-template let-city pTemplate="item">
+        <div class="country-item">
+          <div>{{city.name}}</div>
+        </div>
+      </ng-template>
+    </p-listbox>
+    <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
+               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
+      <ng-template let-city pTemplate="item">
+        <div class="country-item">
+          <div>{{city.name}}</div>
+        </div>
+      </ng-template>
+    </p-listbox>
+  </div>
+</div>
