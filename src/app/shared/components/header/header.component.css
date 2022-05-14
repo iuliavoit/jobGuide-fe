@@ -1,7 +1,8 @@
 .navbar {
   background-color: #d6e2e9;
-  position: sticky;
+  justify-content: end;
   top: 0;
+
 }
 
 .btn {
