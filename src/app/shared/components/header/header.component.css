@@ -1,10 +1,12 @@
 .navbar {
-  background-color: #d6e2e9;
+  background-color:#caf0f8;
   justify-content: end;
   top: 0;
-
 }
 
+.navbar:hover{
+  background-color:#edf6f9;
+}
 .btn {
   margin:3px;
   height:40px;
