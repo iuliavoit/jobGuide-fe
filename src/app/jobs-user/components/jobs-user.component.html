@@ -1,6 +1,6 @@
-
+<app-header></app-header>
 <div class="jobs-container p-d-flexbox">
-  <app-header></app-header>
+
   <div class="filters-row">
     <h3>Filtrează după:</h3>
     <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
@@ -19,5 +19,12 @@
         </div>
       </ng-template>
     </p-listbox>
+  </div>
+  <div class="jobs-row">
+    <app-job-card></app-job-card>
+    <app-job-card></app-job-card>
+    <app-job-card></app-job-card>
+    <app-job-card></app-job-card>
+    <app-job-card></app-job-card>
   </div>
 </div>

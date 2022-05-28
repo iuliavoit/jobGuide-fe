@@ -2,7 +2,7 @@
   width:100%;
   background: #edf6f9;
   font-family: "Times New Roman", Times, serif;
-
+  display: flex;
 }
 .filters-row{
   width:21rem;
@@ -13,7 +13,9 @@
   align-items: center;
   text-align: center;
 }
-
+:host ::ng-deep .p-listbox  {
+  margin-right: 2rem;
+}
 :host ::ng-deep .p-listbox .p-listbox-header .p-listbox-filter {
   background:#E6EEF2;
   color:black;
@@ -22,6 +24,7 @@
   background:white;
   color:black;
 }
+
 :host ::ng-deep .p-listbox .p-listbox-list {
   background:white;
 }
@@ -36,4 +39,10 @@
 }
 :host ::ng-deep .p-checkbox .p-checkbox-box {
   background: #caf0f8;
+}
+
+.jobs-row{
+  display: flex;
+  padding-top: 44px;
+  flex-direction: row;
 }
