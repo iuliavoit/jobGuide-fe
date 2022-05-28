@@ -21,6 +21,9 @@ import { LogoutComponent } from './auth/components/logout/logout.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {ListboxModule} from "primeng/listbox";
+import { AuthTokensComponent } from './auth/components/auth-tokens/auth-tokens.component';
+import {UsersComponent} from "./users/users.component";
+
 
 
 
@@ -34,6 +37,9 @@ import {ListboxModule} from "primeng/listbox";
     AccountComponent,
     JobsUserComponent,
     LogoutComponent,
+    AuthTokensComponent,
+    UsersComponent
+
 
   ],
   imports: [
