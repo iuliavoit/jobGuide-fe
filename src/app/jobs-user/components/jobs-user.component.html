@@ -11,19 +11,11 @@
         </div>
       </ng-template>
     </p-listbox>
-    <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
-               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
-      <ng-template let-city pTemplate="item">
+    <p-listbox [options]="jobTypes" [(ngModel)]="selectedType" [metaKeySelection]="false" [checkbox]="true"
+               [filter]="true" [multiple]="true" filterPlaceHolder="Tip..." optionLabel="type" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
+      <ng-template let-type pTemplate="item">
         <div class="country-item">
-          <div>{{city.name}}</div>
-        </div>
-      </ng-template>
-    </p-listbox>
-    <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
-               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
-      <ng-template let-city pTemplate="item">
-        <div class="country-item">
-          <div>{{city.name}}</div>
+          <div>{{type.type}}</div>
         </div>
       </ng-template>
     </p-listbox>
