@@ -1,7 +1,8 @@
 .homepage-container{
   width: 100%;
   height: 100%;
-  background: #f2e9e4;
+  background: #edf6f9;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .welcome-row{
@@ -24,8 +25,7 @@
   display: flex;
   width: 100%;
   background-color:#edf2f4;
-  border-radius: 10px;
-  margin-top: 5px;
+  border-radius: 15px;
 }
 
 .welcome-paragraph{
@@ -33,6 +33,9 @@
   background-color: white;
   margin-left: 5px;
   border-radius: 15px ;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .guide{
@@ -58,4 +61,35 @@
 .image{
   width: 26%;
   padding-top: 5px;
+}
+
+.mediq-row{
+  margin-top: 15px;
+  color: #457b9d;
+
+}
+
+.in-card{
+  margin-top:50px;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  display: flex;
+}
+
+:host ::ng-deep .mat-card{
+  width: 40rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+:host ::ng-deep .mat-card:hover{
+  background: #caf0f8;
+}
+
+.searchbtn{
+  border-radius: 10px;
+  width:200px;
+  background: #caf0f8;
 }

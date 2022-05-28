@@ -19,6 +19,9 @@ import { AccountComponent } from './account/components/account.component';
 import { JobsUserComponent } from './jobs-user/components/jobs-user.component';
 import { LogoutComponent } from './auth/components/logout/logout.component';
 import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+import {ListboxModule} from "primeng/listbox";
+import { JobCardComponent } from './job-card/job-card.component';
 
 
 
@@ -32,6 +35,7 @@ import {MatIconModule} from "@angular/material/icon";
     AccountComponent,
     JobsUserComponent,
     LogoutComponent,
+    JobCardComponent,
 
   ],
   imports: [
@@ -47,6 +51,8 @@ import {MatIconModule} from "@angular/material/icon";
     RouterModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
+    ListboxModule,
 
   ],
   providers: [],

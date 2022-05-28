@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+export interface City {
+  name: string;
+}
+
+export interface TypeJob {
+  type: string;
+}
+
 
 @Component({
   selector: 'app-jobs-user',
@@ -6,8 +14,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs-user.component.css']
 })
 export class JobsUserComponent implements OnInit {
-
-  constructor() { }
+  cities: City[];
+  jobTypes: TypeJob[];
+  selectedCity: City;
+  selectedType: TypeJob;
+  constructor() {
+    //fetch jobs and add each city here
+    this.cities = [
+      { name: "New York"},
+      { name: "Rome" },
+      { name: "London"},
+      { name: "Istanbul" },
+      { name: "Paris" }
+    ];
+    this.jobTypes=[
+      {type: "Part-Time" },
+      {type:"Full-Time"},
+      {type:"Night-shift"}
+    ]
+  }
 
   ngOnInit(): void {
   }
