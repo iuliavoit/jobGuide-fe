@@ -1,5 +1,6 @@
 .jobs-container{
   width:100%;
+  height: 100%;
   background: #edf6f9;
   font-family: "Times New Roman", Times, serif;
   display: flex;
@@ -44,5 +45,6 @@
 .jobs-row{
   display: flex;
   padding-top: 44px;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

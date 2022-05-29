@@ -7,7 +7,7 @@
                [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
       <ng-template let-city pTemplate="item">
         <div class="country-item">
-          <div>{{city.name}}</div>
+          <div>{{city}}</div>
         </div>
       </ng-template>
     </p-listbox>
@@ -15,16 +15,14 @@
                [filter]="true" [multiple]="true" filterPlaceHolder="Tip..." optionLabel="type" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
       <ng-template let-type pTemplate="item">
         <div class="country-item">
-          <div>{{type.type}}</div>
+          <div>{{type}}</div>
         </div>
       </ng-template>
     </p-listbox>
   </div>
-  <div class="jobs-row">
-    <app-job-card></app-job-card>
-    <app-job-card></app-job-card>
-    <app-job-card></app-job-card>
-    <app-job-card></app-job-card>
-    <app-job-card></app-job-card>
+  <div class="jobs-row p-d-flex" *ngFor="let job of jobs;let i=index">
+    <app-job-card
+    [recievedJob]="job">
+    </app-job-card>
   </div>
 </div>
