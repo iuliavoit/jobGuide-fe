@@ -3,3 +3,12 @@
 @import '~primeng/resources/primeng.min.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.f-h-20{
+  font-size: 20px;
+  max-height: 20px;
+}
+
+.f-h-15{
+  font-size: 15px;
+  max-height: 15px;
+}

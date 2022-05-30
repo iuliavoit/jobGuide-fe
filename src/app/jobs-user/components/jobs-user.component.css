@@ -42,9 +42,9 @@
   background: #caf0f8;
 }
 
-.jobs-row{
-  display: flex;
+.jobs-row {
   padding-top: 44px;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }

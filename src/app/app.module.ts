@@ -22,6 +22,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {ListboxModule} from "primeng/listbox";
 import { JobCardComponent } from './job-card/job-card.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import {DialogModule} from "primeng/dialog";
+import {ConfirmDialogModule} from "primeng/confirmdialog";
 
 
 
@@ -36,25 +39,28 @@ import { JobCardComponent } from './job-card/job-card.component';
     JobsUserComponent,
     LogoutComponent,
     JobCardComponent,
+    JobDetailsComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NoopAnimationsModule,
-    ButtonModule,
-    MatButtonModule,
-    InputTextModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    RouterModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    ListboxModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NoopAnimationsModule,
+        ButtonModule,
+        MatButtonModule,
+        InputTextModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        RouterModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        ListboxModule,
+        DialogModule,
+        ConfirmDialogModule,
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

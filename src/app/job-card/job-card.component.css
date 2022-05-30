@@ -1,6 +1,8 @@
 :host ::ng-deep .mat-card{
-  width: 30rem;
+  width: 50rem;
   background: #E6EEF2;
+  margin-left:140px;
+  margin-top: 20px
 }
 
 :host ::ng-deep .mat-card-title {
