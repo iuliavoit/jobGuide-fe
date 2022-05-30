@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="jobs-container p-d-flexbox">
-
-  <div class="filters-row">
+<div class="filters-row">
     <h3>Filtrează după:</h3>
     <p-listbox [options]="cities" [(ngModel)]="selectedCity" [metaKeySelection]="false" [checkbox]="true"
                [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
@@ -20,9 +19,11 @@
       </ng-template>
     </p-listbox>
   </div>
-  <div class="jobs-row p-d-flex" *ngFor="let job of jobs;let i=index">
-    <app-job-card
-    [recievedJob]="job">
-    </app-job-card>
+  <div class="jobs-row p-flex-row">
+    <div *ngFor="let job of jobs;let i=index">
+      <app-job-card
+      [recievedJob]="job">
+      </app-job-card>
+    </div>
   </div>
 </div>

@@ -17,12 +17,14 @@ export class JobsUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.jobs=[{title:'job xyz 1',type:'Part-time',date:new Date(),city: 'timisoara',employerName:'abc',description:'xyz',nrOfCandidates:20},
-      {title:'job nr 2',type:'Full-time',date:new Date(),city:'bucuresti',employerName:'ddd',description:'as',nrOfCandidates:2}
+    this.jobs=[{title:'job xyz 1',type:'Part-time',date:new Date(),city: 'Timisoara',employerName:'abc',description:'xyz',nrOfCandidates:20},
+      {title:'job nr 2',type:'Full-time',date:new Date(),city:'Bucuresti',employerName:'ddd',description:'as',nrOfCandidates:2},
+      {title:'job nr 3 bla',type:'Part-time',date:new Date(),city:'Cluj-Napoca',employerName:'m',description:'xd',nrOfCandidates:5}
     ]
-    this.jobs.forEach(job=>{this.cities.push(job.city)});
-    this.jobs.forEach(job=>this.jobTypes.push(job.type));
+    this.jobs.forEach(job=>{if(!this.cities.includes(job.city)) this.cities.push(job.city)});
+    this.jobs.forEach(job=>{if(!this.jobTypes.includes(job.type)) this.jobTypes.push(job.type)});
 
   }
+
 
 }

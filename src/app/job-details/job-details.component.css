@@ -1,0 +1,76 @@
+
+:host::ng-deep .p-dialog{
+  width:62.5rem;
+  height:68.75rem;
+  text-align: left;
+  border: unset;
+  background: white;
+  margin-top:2.5rem;
+  color:black;
+}
+
+:host::ng-deep .p-dialog .p-dialog-header {
+  background:#f6fff8;
+  color:black;
+  width: 62.5rem;
+  height: 6rem;
+  border-bottom: 2px black;
+}
+
+:host::ng-deep .p-dialog .p-dialog-footer {
+  background:#f6fff8;
+  width: 62.5rem;
+  height: 5rem;
+  color: black;
+  padding-top:20px;
+  justify-content: center;
+}
+:host::ng-deep .p-dialog .p-dialog-content{
+  background: white;
+  padding: 0;
+}
+
+
+.cancel-button{
+  height: 50px;
+  width:200px;
+  background-color: #c7f9cc!important;
+  border: none;
+  justify-content: center;
+  color:  #3579b2;
+  outline: none!important;
+  box-shadow: none!important;
+  font-size: 15px;
+}
+
+
+.apply-btn{
+  height: 50px;
+  background-color: #c7f9cc!important;
+  border: none;
+  justify-content: center;
+  color:  #3579b2;
+  outline: none!important;
+  box-shadow: none!important;
+  font-size: 15px;
+}
+
+.image{
+  width:60%;
+  height: 100%;
+}
+
+.nd{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description{
+  margin-top: 60px;
+  height:100%;
+  color: black;
+  padding-left:20px;
+  font-family: "Times New Roman", Times, serif;
+}

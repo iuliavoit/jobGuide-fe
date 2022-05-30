@@ -9,9 +9,19 @@ import {Job} from "../models/job";
 export class JobCardComponent implements OnInit {
   @Input()
   recievedJob: Job;
-  constructor() { }
+  showDetailsDialog: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  displayDetails() {
+    this.showDetailsDialog = true;
+  }
+
+  onPopupClosed($event: any) {
+    this.showDetailsDialog = false;
+  }
 }
