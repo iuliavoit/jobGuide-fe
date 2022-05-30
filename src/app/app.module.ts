@@ -17,7 +17,6 @@ import {RouterModule} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { AccountComponent } from './account/components/account.component';
 import { JobsUserComponent } from './jobs-user/components/jobs-user.component';
-import { LogoutComponent } from './auth/components/logout/logout.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {ListboxModule} from "primeng/listbox";
@@ -25,6 +24,13 @@ import { JobCardComponent } from './job-card/job-card.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import {DialogModule} from "primeng/dialog";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { AdminComponent } from './admin/admin.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { UserComponent } from './user/user.component';
+import {AuthGuard} from "./_auth/auth.guard";
+import {AuthInterceptor} from "./_auth/auth.interceptor";
+import {UserService} from "./_services/user.service";
 
 
 
@@ -37,9 +43,11 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
     HomePageComponent,
     AccountComponent,
     JobsUserComponent,
-    LogoutComponent,
     JobCardComponent,
     JobDetailsComponent,
+    ForbiddenComponent,
+    AdminComponent,
+    UserComponent,
 
   ],
     imports: [
@@ -59,9 +67,18 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
         ListboxModule,
         DialogModule,
         ConfirmDialogModule,
+        HttpClientModule
 
     ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    },
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

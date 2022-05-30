@@ -1,12 +1,22 @@
 <div>
   <mat-toolbar class="navbar">
-    <button routerLink="/home-page"
+    <button routerLink="/home"
       mat-button>GuideJobs</button>
     <button routerLink="/jobs"
       mat-button class="btn">Jobs</button>
-    <button routerLink="/account"
+    <button routerLink="/forUser"
+            *ngIf="userService.roleMatch(['User'])"
       mat-button class="btn">Account</button>
-    <button *ngIf="loginService.isUserLoggedIn()" routerLink="/login"
+    <button routerLink="/forAdmin"
+            *ngIf="userService.roleMatch(['Admin'])"
+            mat-button class="btn">Admin</button>
+    <button
+      *ngIf="! isLoggedIn()"
+      routerLink="/login"
+            mat-button class="btn">Log In</button>
+    <button
+      *ngIf="isLoggedIn()"
+      (click)="logout()"
             mat-button class="btn">Sign out</button>
   </mat-toolbar>
 

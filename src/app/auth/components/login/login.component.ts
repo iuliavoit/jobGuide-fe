@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {FormControl, FormGroup} from "@angular/forms";
-import {AuthenticationService} from "./login.service";
+import {FormControl, FormGroup, FormGroupDirective, NgForm} from "@angular/forms";
+import { UserAuthService } from 'src/app/_services/user-auth.service';
+import { UserService } from 'src/app/_services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -21,31 +22,42 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted=true;
 
-    const email=this.loginForm.value.email;
-    const password=this.loginForm.value.password;
+    const userName=this.loginForm.value.email;
+    const userPassword=this.loginForm.value.password;
 
     this.loginForm.reset();
 
-    console.log(email);
-    console.log(password);
+
   }
 
-  username = 'test@test.com';
-  password= '';
-  invalidLogin = false;
+  constructor(
+    private userService: UserService,
+    private userAuthService: UserAuthService,
+    private router: Router,
 
-  constructor(private router:Router,
-              private loginservice: AuthenticationService) { }
+  ) { }
 
   ngOnInit(): void {
+
   }
 
-  checkLogin() {
-    if (this.loginservice.authenticate(this.username, this.password)
-    ) {
-      this.router.navigate(['home-page'])
-      this.invalidLogin = false
-    } else
-      this.invalidLogin = true
+  login(loginForm: FormGroup) {
+    console.log(loginForm.value);
+    this.userService.login(loginForm.value).subscribe(
+      (response: any) => {
+        this.userAuthService.setRoles(response.user.role);
+        this.userAuthService.setToken(response.jwtToken);
+
+        const role = response.user.role[0].roleName;
+        if (role === 'Admin') {
+          this.router.navigate(['/forAdmin']);
+        } else {
+          this.router.navigate(['/forUser']);
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
