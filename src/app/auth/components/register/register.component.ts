@@ -100,8 +100,8 @@ export class RegisterComponent implements OnInit {
 
     this.registerForm2.value.userName = registerForm.value.userName;
     this.registerForm2.value.userPassword = registerForm.value.userPassword;
-    this.registerForm2.value.userFirstName = registerForm.value.userName;
-    this.registerForm2.value.userLastName = registerForm.value.userName;
+    this.registerForm2.value.userFirstName = registerForm.value.userFirstName;
+    this.registerForm2.value.userLastName = registerForm.value.userLastName;
     this.registerForm2.value.age = registerForm.value.age;
 
     console.log(this.registerForm2.value);

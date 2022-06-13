@@ -1,0 +1,45 @@
+.jobs-container{
+  width:100%;
+  height: 100%;
+  background: #edf6f9;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+}
+
+:host ::ng-deep .p-listbox  {
+  margin-right: 2rem;
+}
+:host ::ng-deep .p-listbox .p-listbox-header .p-listbox-filter {
+  background:#E6EEF2;
+  color:black;
+}
+:host ::ng-deep .p-listbox .p-listbox-header {
+  background:white;
+  color:black;
+}
+
+:host ::ng-deep .p-listbox .p-listbox-list {
+  background:white;
+}
+.country-item{
+  color:black;
+}
+:host ::ng-deep .p-listbox .p-listbox-list .p-listbox-item {
+  border-bottom: 2px solid black;
+}
+:host ::ng-deep .p-listbox .p-listbox-header .p-listbox-filter-icon {
+  color:black;
+}
+:host ::ng-deep .p-checkbox .p-checkbox-box {
+  background: #caf0f8;
+}
+
+.jobs-row {
+  display: block;
+  margin-left: 10rem;
+  margin-right: auto;
+  padding-top: 44px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

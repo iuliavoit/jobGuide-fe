@@ -19,7 +19,7 @@ export class JobsUserComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private getUsersService: JobsUserService
+    private getJobsService: JobsUserService
   ) { }
 
   ngOnInit(): void {
@@ -47,7 +47,7 @@ export class JobsUserComponent implements OnInit {
   }
 
   getAllJobs() {
-    this.getUsersService.getAllJobs().subscribe(
+    this.getJobsService.getAllJobs().subscribe(
         res => {
           this.jobs=res;
           this.jobs.forEach(job=>{if(!this.cities.includes(job.city)) this.cities.push(job.city)});

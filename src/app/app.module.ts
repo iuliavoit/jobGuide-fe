@@ -31,6 +31,9 @@ import { UserComponent } from './user/user.component';
 import {AuthGuard} from "./_auth/auth.guard";
 import {AuthInterceptor} from "./_auth/auth.interceptor";
 import {UserService} from "./_services/user.service";
+import { AppliedJobsUserComponent } from './applied-jobs-user/applied-jobs-user.component';
+import { AppliedJobsDetailsComponent } from './applied-jobs-details/applied-jobs-details.component';
+import { AppliedJobsCardComponent } from './applied-jobs-card/applied-jobs-card.component';
 
 
 
@@ -48,6 +51,9 @@ import {UserService} from "./_services/user.service";
     ForbiddenComponent,
     AdminComponent,
     UserComponent,
+    AppliedJobsUserComponent,
+    AppliedJobsDetailsComponent,
+    AppliedJobsCardComponent,
 
   ],
     imports: [

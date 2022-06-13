@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,9 @@ export class RegisterService {
 
   // @ts-ignore
   registerNewUser(registerData) {
-    return this.httpClient.post(this.urlRegister, registerData);
+    let headers = new HttpHeaders().set('Access-Control-Allow-Origin', 'http://localhost:9090/registerNewUser');
+    return this.httpClient.post(this.urlRegister, registerData, {
+      headers: headers,
+    });
   }
 }

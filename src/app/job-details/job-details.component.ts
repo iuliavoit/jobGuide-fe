@@ -3,6 +3,7 @@ import {Job} from "../models/job";
 import { UserService } from 'src/app/_services/user.service';
 import {AdminService} from "../admin/admin.service";
 import {JobServiceService} from "./job-service.service";
+import {User} from "../models/user";
 
 @Component({
   selector: 'app-job-details',
@@ -14,12 +15,14 @@ export class JobDetailsComponent implements OnInit {
   visible: boolean = false;
   @Input()
   job: Job;
+  user: User;
   @Output()
   popupClosed = new EventEmitter();
 
   constructor(
     public userService: UserService,
     private deleteJobService: JobServiceService,
+    private applyJobService: JobServiceService
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +33,7 @@ export class JobDetailsComponent implements OnInit {
   }
 
   apply() {
-    //call service for apply
+    this.applyJobService.applyJob(this.job.id).subscribe();
   }
 
   delete() {

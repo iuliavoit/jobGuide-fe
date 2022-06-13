@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>
+    {{recievedJob.title}}
+  </mat-card-title>
+  <mat-card-subtitle>	Locatie: {{recievedJob.city}}</mat-card-subtitle>
+  <mat-card-content>
+    <mat-card-actions>
+      <button pButton class="details-button" (click)="displayDetails()">Vezi detalii</button>
+      <app-applied-jobs-details
+        [job]="recievedJob"
+        [visible]="showDetailsDialog"
+        (popupClosed)="onPopupClosed($event)">
+      </app-applied-jobs-details>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

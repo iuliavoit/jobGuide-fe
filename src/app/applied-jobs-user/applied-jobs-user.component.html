@@ -1,0 +1,10 @@
+<div class="jobs-container p-d-flexbox">
+  <div class="jobs-row p-flex-row">
+    <div *ngFor="let job of filteredJobs;let i=index">
+      <app-applied-jobs-card
+        [recievedJob]="job">
+      </app-applied-jobs-card>
+    </div>
+  </div>
+</div>
+

@@ -1,29 +1,4 @@
 <app-header></app-header>
-<div class="jobs-container p-d-flexbox">
-  <div class="filters-row">
-    <h3>Filtrează după:</h3>
-    <p-listbox [options]="cities" [(ngModel)]="selectedCity" (ngModelChange)="filterJobsByCity()" [metaKeySelection]="false" [checkbox]="true"
-               [filter]="true" [multiple]="true" filterPlaceHolder="Oras..." optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
-      <ng-template let-city pTemplate="item">
-        <div class="country-item">
-          <div>{{city}}</div>
-        </div>
-      </ng-template>
-    </p-listbox>
-    <p-listbox [options]="jobTypes" [(ngModel)]="selectedType" (ngModelChange)="filterJobsByType()" [metaKeySelection]="false" [checkbox]="true"
-               [filter]="true" [multiple]="true" filterPlaceHolder="Tip..." optionLabel="type" [listStyle]="{'max-height':'250px'}" [style]="{'margin-bottom': '2rem','width': '17rem','margin-left': '2rem'}">
-      <ng-template let-type pTemplate="item">
-        <div class="country-item">
-          <div>{{type}}</div>
-        </div>
-      </ng-template>
-    </p-listbox>
-  </div>
-  <div class="jobs-row p-flex-row">
-    <div *ngFor="let job of filteredJobs;let i=index">
-      <app-job-card
-        [recievedJob]="job">
-      </app-job-card>
-    </div>
-  </div>
-</div>
+<app-applied-jobs-user></app-applied-jobs-user>
+
+

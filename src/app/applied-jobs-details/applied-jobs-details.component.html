@@ -1,0 +1,31 @@
+<p-dialog [(visible)]="visible"
+          [baseZIndex]="10000"
+          (onHide)="closePopup()"
+          [draggable]="false"
+          [modal]="true" >
+  <p-header >
+    <p class="f-h-20">{{job.title}}</p>
+    <p class="f-h-15">Postat la data de: {{job.date}}</p>
+    <p class="f-h-15">Angajator: {{job.employerName}}</p>
+  </p-header>
+  <div class="nd">
+    <div class="description">
+      <p class="f-h-20"><b>Descrierea jobului : {{job.description}}</b></p>
+      <p class="f-h-20"><b>Locatie : {{job.city}}</b></p>
+      <p class="f-h-20"><b>Tip : {{job.type}}</b></p>
+      <p class="f-h-20"><b>Pentru acest job au aplicat pana acum {{job.nrOfCandidates}} persoane.</b></p>
+    </div>
+    <img src="../assets/career.jpeg"
+         class="image">
+  </div>
+  <p-footer>
+    <div style="display: flex; justify-content: space-between;text-align: center">
+
+      <button pButton  (click)="closePopup()"  class="cancel-button">
+        <mat-icon>close</mat-icon>
+        <p style="padding-top:12px;">Anulare</p>
+      </button>
+    </div>
+
+  </p-footer>
+</p-dialog>
