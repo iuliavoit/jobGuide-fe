@@ -20,9 +20,15 @@
   </div>
   <p-footer>
     <div style="display: flex; justify-content: space-between;text-align: center">
-      <button pButton  (click)="apply();closePopup()"  class="apply-btn">
+      <button pButton  (click)="apply();closePopup()"  class="apply-btn"
+              *ngIf="userService.roleMatch(['User'])">
         <mat-icon>check</mat-icon>
         <p style="padding-top:12px;">Aplica pentru acest job</p>
+      </button>
+      <button pButton  (click)="delete();closePopup();"  class="apply-btn"
+              *ngIf="userService.roleMatch(['Admin'])">
+        <mat-icon>check</mat-icon>
+        <p style="padding-top:12px;">Sterge acest job</p>
       </button>
       <button pButton  (click)="closePopup()"  class="cancel-button">
         <mat-icon>close</mat-icon>

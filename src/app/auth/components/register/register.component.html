@@ -8,28 +8,40 @@
       </div>
     </div>
     <div class="right-row">
-      <form [formGroup]="loginForm" id="ngForm" #authForm="ngForm">
+      <form [formGroup]="registerForm"  #authForm="ngForm">
         <mat-form-field class="form-field">
-          <input type="email" class="" matInput placeholder="Email"    formControlName="email" required email
-                 [(ngModel)]="username">
+          <input type="email" class="" matInput placeholder="Email"    formControlName="userName" required email>
         </mat-form-field>
         <mat-form-field class="form-field">
-          <input type="password" class="" matInput placeholder="Password"   formControlName="password" required minlength="6"
-                 [(ngModel)]="password">
+          <input type="password" class="" matInput placeholder="Password"   formControlName="userPassword" required minlength="6">
         </mat-form-field>
         <mat-form-field class="form-field">
-          <input type="password" class="" matInput placeholder="Confirm Password"   formControlName="password" required minlength="6"
-                 [(ngModel)]="confirmPassword">
+          <input type="password" class="" matInput placeholder="Confirm Password"   formControlName="confirmPassword"  required minlength="6">
         </mat-form-field>
+        <mat-form-field class="form-field">
+          <input type="text" class="" matInput placeholder="First Name"   formControlName="userFirstName" required String>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input type="text" class="" matInput placeholder="Last Name"   formControlName="userLastName" required String>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input type="number" class="" matInput placeholder="Age"   formControlName="age" required number>
+        </mat-form-field>
+
       </form>
       <button
-        pButton type="submit" class="btn" (click)="onSubmit(); checkRegister()" type="button" [disabled]="!authForm.valid">
+        pButton type="submit" class="btn" (click)="onSubmit(); checkRegister(); registerNewUser(registerForm)" type="button" [disabled]="!authForm.valid">
         Sign up
       </button>
       <pre></pre>
       <button pButton type="submit" class="btn" type="button" routerLink="/login" (click)="onSubmit()">
         Switch to Log in
       </button>
+      <br>
+      <br>
+      <label class="validi" *ngIf="passwordWarning">Invalid Credentials. Passwords don't match!</label>
+      <br *ngIf="passwordWarning">
+      <label class="validi" *ngIf="ageWarning">You must be at least 18 years old to register.</label>
     </div>
   </div>
 </div>

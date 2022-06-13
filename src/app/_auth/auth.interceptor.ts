@@ -45,6 +45,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
 
   private addToken(request:HttpRequest<any>, token:string) {
+    //do not add header for authenticate login
     return request.clone(
       {
         setHeaders: {

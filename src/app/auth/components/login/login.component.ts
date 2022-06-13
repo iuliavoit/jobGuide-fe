@@ -12,10 +12,11 @@ import { UserService } from 'src/app/_services/user.service';
 export class LoginComponent implements OnInit {
 
   submitted = false;
+
   loginForm= new FormGroup(
     {
-      email: new FormControl(),
-      password: new FormControl(),
+      userName: new FormControl(),
+      userPassword: new FormControl(),
     }
   );
 
@@ -26,19 +27,15 @@ export class LoginComponent implements OnInit {
     const userPassword=this.loginForm.value.password;
 
     this.loginForm.reset();
-
-
   }
 
   constructor(
     private userService: UserService,
     private userAuthService: UserAuthService,
     private router: Router,
-
   ) { }
 
   ngOnInit(): void {
-
   }
 
   login(loginForm: FormGroup) {
@@ -52,7 +49,7 @@ export class LoginComponent implements OnInit {
         if (role === 'Admin') {
           this.router.navigate(['/forAdmin']);
         } else {
-          this.router.navigate(['/forUser']);
+          this.router.navigate(['/home']);
         }
       },
       (error) => {

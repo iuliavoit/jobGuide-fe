@@ -14,6 +14,7 @@ export class UserService {
     private userAuthService: UserAuthService
   ) {}
 
+
   // @ts-ignore
   public login(loginData) {
     return this.httpclient.post(this.PATH_OF_API + '/authenticate', loginData, {

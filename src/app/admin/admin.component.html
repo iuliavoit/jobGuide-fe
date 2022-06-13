@@ -1,2 +1,55 @@
-<app-header></app-header>
-<p>admin works!</p>
+<div class="admin-container">
+  <div class="admin-panel">
+    <form [formGroup]="adminForm" #admForm="ngForm">
+      <mat-form-field class="form-field" class="formControl">
+        <input type="text"
+               class=""
+               matInput placeholder="Title"
+               formControlName="title"
+               required>
+      </mat-form-field>
+      <mat-form-field class="form-field" class="formControl">
+        <input type="text"
+               class=""
+               matInput placeholder="Type"
+               formControlName="type"
+               required>
+      </mat-form-field>
+      <mat-form-field class="form-field" class="formControl">
+        <input type="text"
+               class=""
+               matInput placeholder="City"
+               formControlName="city"
+               required>
+      </mat-form-field>
+      <mat-form-field class="form-field" class="formControl">
+        <input type="text"
+               class=""
+               matInput placeholder="Employer Name"
+               formControlName="employerName"
+               required>
+      </mat-form-field>
+      <mat-form-field class="form-field" class="formControl">
+        <input type="text"
+               class=""
+               matInput placeholder="Description"
+               formControlName="description"
+               required>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="form-field" class="formControl">
+        <input type="date"
+               min="2022-06-13"
+               max="2030-12-31"
+               matInput placeholder="Date"
+               formControlName="date"
+               required>
+      </mat-form-field>
+      <br>
+      <br>
+      <button (click)="addJob(adminForm)" pButton type="submit" type="button" class="btn" [disabled]="!admForm.valid">Submit</button>
+      <br>
+      <button pButton type="button" class="btn" routerLink="/home">Return home</button>
+    </form>
+  </div>
+</div>
